@@ -1,0 +1,137 @@
+:root {
+    --primary-green: #1E5631;
+    --primary-gold: #F4C430;
+    --bg-cream: #F9F9F6;
+    --text-dark: #2C3E50;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(30, 86, 49, 0.1);
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(30, 86, 49, 0.95) 0%, rgba(45, 90, 39, 0.85) 100%),
+                url('https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+}
+
+.card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px -10px rgba(30, 86, 49, 0.15);
+}
+
+.btn-gold {
+    background-color: var(--primary-gold);
+    color: #1A252C;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 14px rgba(244, 196, 48, 0.35);
+}
+
+.btn-gold:hover {
+    background-color: #E5A93C;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(244, 196, 48, 0.45);
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover {
+    background-color: #1DA851;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+}
+
+.step-badge {
+    background: linear-gradient(135deg, #F4C430 0%, #E5A93C 100%);
+}
+
+.tab-btn.active {
+    background-color: #1E5631;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(30, 86, 49, 0.25);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F9F9F6;
+}
+::-webkit-scrollbar-thumb {
+    background: #1E5631;
+    border-radius: 4px;
+}
+
+/* Responsive embed wrapper (Google Drive preview, YouTube, dsb) */
+.iframe-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: #0f0f0f;
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Rasio dokumen (mirip halaman A4 potret) untuk preview PDF Google Drive */
+.document-ratio {
+    padding-bottom: 130%;
+}
+
+/* Rasio video 16:9 untuk YouTube */
+.video-ratio {
+    padding-bottom: 56.25%;
+}
+
+/* Step card klik indikator */
+.step-click-hint {
+    opacity: 0.75;
+    transition: opacity 0.2s ease-in-out;
+}
+.card-hover:hover .step-click-hint {
+    opacity: 1;
+}
+
+/* Modal Tutorial Detail */
+.modal-overlay {
+    background: rgba(20, 30, 20, 0.65);
+    backdrop-filter: blur(3px);
+}
+
+.modal-panel {
+    animation: modalPop 0.25s ease-out;
+    max-height: 88vh;
+}
+
+@keyframes modalPop {
+    from { opacity: 0; transform: translateY(20px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}

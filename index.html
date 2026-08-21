@@ -1,0 +1,1126 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Echobriq | Inovasi Pembelajaran Briket Sekam Padi</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                green: "#1E5631",
+                greenDark: "#143D22",
+                greenLight: "#2D5A27",
+                gold: "#F4C430",
+                goldHover: "#E5A93C",
+                bgCream: "#F9F9F6",
+                textDark: "#2C3E50",
+              },
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom Stylesheet (dipisah dari HTML) -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="antialiased">
+    <!-- Navigation Bar -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <a href="#home" class="flex items-center gap-3 group">
+            <div
+              class="w-11 h-11 rounded-xl bg-brand-green flex items-center justify-center text-brand-gold text-2xl shadow-md group-hover:scale-105 transition-transform"
+            >
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div class="flex flex-col">
+              <span
+                class="font-extrabold text-xl tracking-tight text-brand-green"
+                >Echobriq<span class="text-brand-gold">.site</span></span
+              >
+              <span
+                class="text-[10px] text-gray-500 tracking-wider font-medium -mt-1"
+                >INOVASI SEKAM PADI</span
+              >
+            </div>
+          </a>
+
+          <!-- Desktop Menu -->
+          <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-brand-green transition-colors py-2"
+              >Beranda</a
+            >
+            <a
+              href="#manfaat"
+              class="text-gray-700 hover:text-brand-green transition-colors py-2"
+              >Keunggulan</a
+            >
+            <a
+              href="#tutorial"
+              class="text-gray-700 hover:text-brand-green transition-colors py-2"
+              >Panduan</a
+            >
+            <a
+              href="#faq"
+              class="text-gray-700 hover:text-brand-green transition-colors py-2"
+              >FAQ</a
+            >
+            <a
+              href="#tentang"
+              class="text-gray-700 hover:text-brand-green transition-colors py-2"
+              >Tentang</a
+            >
+          </nav>
+
+          <!-- CTA Button Desktop: Konsultasi WhatsApp -->
+          <div class="hidden md:block">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-whatsapp px-5 py-2.5 rounded-xl text-sm inline-flex items-center gap-2 wa-consult-btn"
+            >
+              <i class="fa-brands fa-whatsapp text-base"></i>
+              <span>Konsultasi via WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden text-2xl text-brand-green p-2 focus:outline-none"
+            aria-label="Toggle Navigation"
+          >
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-3 pb-6 shadow-xl transition-all"
+      >
+        <div class="flex flex-col space-y-3 font-medium text-base">
+          <a
+            href="#home"
+            class="mobile-nav-link text-gray-700 hover:text-brand-green py-2 px-3 rounded-lg hover:bg-gray-50"
+            >Beranda</a
+          >
+          <a
+            href="#manfaat"
+            class="mobile-nav-link text-gray-700 hover:text-brand-green py-2 px-3 rounded-lg hover:bg-gray-50"
+            >Keunggulan</a
+          >
+          <a
+            href="#tutorial"
+            class="mobile-nav-link text-gray-700 hover:text-brand-green py-2 px-3 rounded-lg hover:bg-gray-50"
+            >Panduan Singkat</a
+          >
+          <a
+            href="#faq"
+            class="mobile-nav-link text-gray-700 hover:text-brand-green py-2 px-3 rounded-lg hover:bg-gray-50"
+            >FAQ & Tips</a
+          >
+          <a
+            href="#tentang"
+            class="mobile-nav-link text-gray-700 hover:text-brand-green py-2 px-3 rounded-lg hover:bg-gray-50"
+            >Tentang</a
+          >
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mobile-nav-link btn-whatsapp px-5 py-3 rounded-xl text-center flex items-center justify-center gap-2 mt-2 wa-consult-btn"
+          >
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Konsultasi via WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= 1. BERANDA (HERO) ================= -->
+    <section
+      id="home"
+      class="pt-28 lg:pt-36 pb-20 hero-gradient text-white relative overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-brand-gold text-xs font-semibold tracking-wide uppercase"
+            >
+              <i class="fa-solid fa-graduation-cap"></i> Media Pembelajaran
+              Terpadu
+            </div>
+            <h1
+              class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight"
+            >
+              Ubah Limpahan Sekam Padi Menjadi
+              <span class="text-brand-gold">Briket Ramah Lingkungan</span>
+            </h1>
+            <p
+              class="text-gray-200 text-base sm:text-lg max-w-2xl font-light leading-relaxed"
+            >
+              Platform edukasi lengkap pembuatan briket bio-energi berbasis
+              limbah pertanian. Pelajari teknik karbonisasi, komposisi ideal,
+              dapatkan modul gratis, dan pelajari video praktek mandiri.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div
+              class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
+            >
+              <a
+                href="#manfaat"
+                class="btn-gold px-7 py-3.5 rounded-xl font-semibold flex items-center gap-3 w-full sm:w-auto justify-center text-base"
+              >
+                <i class="fa-solid fa-star"></i>
+                <span>Lihat Keunggulan</span>
+              </a>
+              <a
+                href="#tutorial"
+                class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-7 py-3.5 rounded-xl font-semibold backdrop-blur-sm transition-all flex items-center gap-3 w-full sm:w-auto justify-center text-base"
+              >
+                <i class="fa-solid fa-book-open"></i>
+                <span>Panduan Singkat</span>
+              </a>
+            </div>
+
+            <!-- Highlight Badges -->
+            <div
+              class="pt-8 grid grid-cols-3 gap-4 border-t border-white/10 max-w-lg mx-auto lg:mx-0"
+            >
+              <div>
+                <div class="text-2xl font-bold text-brand-gold">100%</div>
+                <div class="text-xs text-gray-300">Bio-Energi Lokal</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-brand-gold">
+                  Tinggi Kalori
+                </div>
+                <div class="text-xs text-gray-300">Panas Tahan Lama</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-brand-gold">Zero Waste</div>
+                <div class="text-xs text-gray-300">Daur Ulang Limbah</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image Card -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <div
+                class="absolute -inset-1 bg-brand-gold rounded-3xl blur opacity-30 animate-pulse"
+              ></div>
+              <div
+                class="relative bg-white p-3 rounded-3xl shadow-2xl overflow-hidden"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop"
+                  alt="Briket Sekam Padi"
+                  class="w-full h-80 sm:h-96 object-cover rounded-2xl"
+                />
+                <div class="p-5 bg-white">
+                  <div
+                    class="flex items-center justify-between text-xs text-gray-500 mb-2"
+                  >
+                    <span
+                      class="bg-green-100 text-brand-green font-semibold px-2.5 py-1 rounded-md"
+                      >Briket Biomassa</span
+                    >
+                    <span
+                      ><i class="fa-regular fa-clock me-1"></i> Ramah
+                      Kantong</span
+                    >
+                  </div>
+                  <h3 class="text-lg font-bold text-brand-textDark">
+                    Solusi Energi Terjangkau bagi UMKM & Rumah Tangga
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 2. KEUNGGULAN ================= -->
+    <section
+      id="manfaat"
+      class="py-20 bg-brand-bgCream border-t border-b border-gray-200/60"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span
+            class="text-brand-green font-semibold text-sm uppercase tracking-wider bg-green-100/60 px-3 py-1.5 rounded-full"
+          >
+            Mengapa Sekam Padi?
+          </span>
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold text-brand-textDark mt-3"
+          >
+            Keunggulan Briket Sekam Padi
+          </h2>
+          <p class="text-gray-600 mt-4 leading-relaxed">
+            Sekam padi merupakan limbah melimpah dari hasil penggilingan padi
+            yang memiliki potensi biomassa luar biasa sebagai pengganti bahan
+            bakar fosil.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-green-100 text-brand-green flex items-center justify-center text-xl mb-4"
+            >
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-textDark mb-2">
+              Ramah Lingkungan
+            </h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Mengecilkan emisi gas rumah kaca dan mengurangi kebiasaan membakar
+              limbah sekam secara terbuka di sawah.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-4"
+            >
+              <i class="fa-solid fa-fire-flame-curved"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-textDark mb-2">
+              Panas Stabil & Lama
+            </h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Nilai kalor arang sekam dapat mencapai 4.000 - 4.500 kcal/kg
+              dengan bara api bertahan lebih konsisten.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-xl mb-4"
+            >
+              <i class="fa-solid fa-smog"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-textDark mb-2">
+              Minim Asap & Bau
+            </h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Proses karbonisasi sempurna menghasilkan briket bersuhu tinggi
+              tanpa asap pekat sehingga aman untuk keperluan memasak.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-yellow-100 text-yellow-700 flex items-center justify-center text-xl mb-4"
+            >
+              <i class="fa-solid fa-piggy-bank"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-textDark mb-2">
+              Hemat & Ekonomis
+            </h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Bahan baku melimpah dan murah, memberikan alternatif energi
+              terjangkau bagi pemakaian rumah tangga dan usaha.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. PANDUAN SINGKAT (Tutorial + Video + Buku) ================= -->
+    <section id="tutorial" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-brand-green font-semibold text-sm uppercase tracking-wider bg-green-50 px-3 py-1.5 rounded-full border border-green-200"
+          >
+            Panduan Praktis
+          </span>
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold text-brand-textDark mt-3"
+          >
+            5 Langkah Mudah Membuat Briket Sekam Padi
+          </h2>
+          <p class="text-gray-600 mt-4 leading-relaxed">
+            Ikuti alur pembelajaran terstruktur di bawah ini. Klik setiap kartu
+            langkah untuk melihat instruksi lengkap, bahan, alat, dan tips
+            keselamatan.
+          </p>
+        </div>
+
+        <!-- Steps Grid (clickable -> modal detail) -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Step 1 -->
+          <div
+            class="step-card bg-brand-bgCream p-8 rounded-2xl border border-gray-100 card-hover relative flex flex-col justify-between"
+            data-step="1"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span
+                  class="step-badge w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl text-brand-textDark shadow-md"
+                  >01</span
+                >
+                <i
+                  class="fa-solid fa-wheat-awn text-3xl text-brand-green/30"
+                ></i>
+              </div>
+              <h3 class="text-xl font-bold text-brand-textDark mb-3">
+                Persiapan & Pengumpulan Sekam
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Kumpulkan sekam padi kering langsung dari penggilingan padi.
+                Pastikan sekam bebas dari tanah, kerikil, dan kelembapan
+                berlebih agar proses pengarangan optimal.
+              </p>
+            </div>
+            <div
+              class="pt-4 border-t border-gray-200/60 text-xs text-brand-green font-semibold flex items-center justify-between"
+            >
+              <span class="flex items-center gap-2"
+                ><i class="fa-solid fa-check-circle"></i> Kriteria: Sekam Kering
+                & Bersih</span
+              >
+              <span class="step-click-hint text-brand-gold"
+                ><i class="fa-solid fa-circle-info"></i> Detail</span
+              >
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div
+            class="step-card bg-brand-bgCream p-8 rounded-2xl border border-gray-100 card-hover relative flex flex-col justify-between"
+            data-step="2"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span
+                  class="step-badge w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl text-brand-textDark shadow-md"
+                  >02</span
+                >
+                <i class="fa-solid fa-fire text-3xl text-brand-green/30"></i>
+              </div>
+              <h3 class="text-xl font-bold text-brand-textDark mb-3">
+                Proses Pengarangan (Karbonisasi)
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Bakar sekam menggunakan cerobong pembakaran khusus (drum
+                karbonisasi) tanpa oksigen berlebih sampai sekam berubah menjadi
+                arang hitam sempurna.
+              </p>
+            </div>
+            <div
+              class="pt-4 border-t border-gray-200/60 text-xs text-brand-green font-semibold flex items-center justify-between"
+            >
+              <span class="flex items-center gap-2"
+                ><i class="fa-solid fa-check-circle"></i> Jaga agar sekam tidak
+                jadi abu</span
+              >
+              <span class="step-click-hint text-brand-gold"
+                ><i class="fa-solid fa-circle-info"></i> Detail</span
+              >
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div
+            class="step-card bg-brand-bgCream p-8 rounded-2xl border border-gray-100 card-hover relative flex flex-col justify-between"
+            data-step="3"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span
+                  class="step-badge w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl text-brand-textDark shadow-md"
+                  >03</span
+                >
+                <i class="fa-solid fa-flask text-3xl text-brand-green/30"></i>
+              </div>
+              <h3 class="text-xl font-bold text-brand-textDark mb-3">
+                Pembuatan Perekat Molase
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Larutkan tepung tapioka/kanji dicampur dengan molase (tetes
+                tebu) dan air. Panaskan hingga mengental membentuk adonan lem
+                perekat biomassa yang kuat.
+              </p>
+            </div>
+            <div
+              class="pt-4 border-t border-gray-200/60 text-xs text-brand-green font-semibold flex items-center justify-between"
+            >
+              <span class="flex items-center gap-2"
+                ><i class="fa-solid fa-check-circle"></i> Rasio adonan: 10% dari
+                berat arang</span
+              >
+              <span class="step-click-hint text-brand-gold"
+                ><i class="fa-solid fa-circle-info"></i> Detail</span
+              >
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div
+            class="step-card bg-brand-bgCream p-8 rounded-2xl border border-gray-100 card-hover relative flex flex-col justify-between"
+            data-step="4"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span
+                  class="step-badge w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl text-brand-textDark shadow-md"
+                  >04</span
+                >
+                <i
+                  class="fa-solid fa-compact-disc text-3xl text-brand-green/30"
+                ></i>
+              </div>
+              <h3 class="text-xl font-bold text-brand-textDark mb-3">
+                Pencampuran & Pencetakan
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Aduk halus arang sekam dengan perekat molase hingga merata.
+                Masukkan adonan ke dalam cetakan briket (silinder/kubus) dan
+                tekan menggunakan alat press.
+              </p>
+            </div>
+            <div
+              class="pt-4 border-t border-gray-200/60 text-xs text-brand-green font-semibold flex items-center justify-between"
+            >
+              <span class="flex items-center gap-2"
+                ><i class="fa-solid fa-check-circle"></i> Tekanan padat untuk
+                kepadatan maksimal</span
+              >
+              <span class="step-click-hint text-brand-gold"
+                ><i class="fa-solid fa-circle-info"></i> Detail</span
+              >
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div
+            class="step-card bg-brand-bgCream p-8 rounded-2xl border border-gray-100 card-hover relative flex flex-col justify-between"
+            data-step="5"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span
+                  class="step-badge w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl text-brand-textDark shadow-md"
+                  >05</span
+                >
+                <i class="fa-solid fa-sun text-3xl text-brand-green/30"></i>
+              </div>
+              <h3 class="text-xl font-bold text-brand-textDark mb-3">
+                Pengeringan & Uji Coba
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Jemur briket basah di bawah sinar matahari selama 2-3 hari
+                hingga kadar air di bawah 8%. Briket siap diuji nyala api dan
+                dikemas!
+              </p>
+            </div>
+            <div
+              class="pt-4 border-t border-gray-200/60 text-xs text-brand-green font-semibold flex items-center justify-between"
+            >
+              <span class="flex items-center gap-2"
+                ><i class="fa-solid fa-check-circle"></i> Hasil: Api biru-merah
+                bebas asap</span
+              >
+              <span class="step-click-hint text-brand-gold"
+                ><i class="fa-solid fa-circle-info"></i> Detail</span
+              >
+            </div>
+          </div>
+
+          <!-- Summary CTA Card -->
+          <div
+            class="bg-brand-green p-8 rounded-2xl text-white flex flex-col justify-between shadow-xl"
+          >
+            <div>
+              <div
+                class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-brand-gold text-2xl mb-6"
+              >
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Ingin Panduan Lengkap?</h3>
+              <p class="text-gray-200 text-sm leading-relaxed mb-6">
+                Baca e-book modul lengkap berisi formula komposisi presisi,
+                analisis kelayakan usaha, serta langkah pengarangan yang aman,
+                atau tonton video praktiknya di bawah ini.
+              </p>
+            </div>
+            <a
+              href="#media"
+              class="btn-gold w-full py-3 px-4 rounded-xl font-bold flex items-center justify-center gap-2 text-sm shadow-md"
+            >
+              <i class="fa-solid fa-arrow-down"></i> Lihat Video & Buku Panduan
+            </a>
+          </div>
+        </div>
+
+        <!-- Sub-section: Video & Buku Panduan -->
+        <div id="media" class="mt-20 pt-16 border-t border-gray-100">
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <span
+              class="text-brand-green font-semibold text-sm uppercase tracking-wider bg-green-50 px-3 py-1.5 rounded-full border border-green-200"
+            >
+              Media Pendukung
+            </span>
+            <h2
+              class="text-2xl sm:text-3xl font-extrabold text-brand-textDark mt-3"
+            >
+              Video Tutorial & Buku Panduan Digital
+            </h2>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+            <!-- Video Tutorial -->
+            <div
+              class="bg-white p-8 rounded-3xl border border-gray-100 shadow-lg flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-6">
+                  <h3 class="text-xl font-bold text-brand-textDark">
+                    Video Tutorial Praktik
+                  </h3>
+                  <span
+                    class="text-xs font-semibold bg-red-100 text-red-600 px-3 py-1 rounded-full flex items-center gap-1"
+                  >
+                    <i class="fa-brands fa-youtube"></i> YouTube
+                  </span>
+                </div>
+                <p class="text-gray-600 text-sm mb-6">
+                  Tonton tutorial visual proses pembuatan briket dari sekam padi
+                  berikut agar Anda memiliki gambaran praktis yang lebih jelas.
+                </p>
+
+                <div
+                  class="mt-6 p-4 rounded-xl bg-green-50 border border-green-100 flex items-center gap-4"
+                >
+                  <div
+                    class="w-10 h-10 rounded-full bg-brand-green text-brand-gold flex items-center justify-center text-lg flex-shrink-0"
+                  >
+                    <i class="fa-solid fa-lightbulb"></i>
+                  </div>
+                  <p class="text-xs text-gray-700 leading-relaxed">
+                    <span class="font-bold text-brand-green"
+                      >Tips Pembelajaran:</span
+                    >
+                    Sambil menonton video, Anda dapat merujuk pada Halaman 12 di
+                    Buku Panduan untuk tabel takaran bahan perekat.
+                  </p>
+                </div>
+
+                <br />
+
+                <!-- Video embed - menggunakan format embed resmi YouTube agar dapat diputar -->
+                <div class="iframe-wrapper video-ratio shadow-md">
+                  <iframe
+                    src="https://www.youtube.com/embed/iEI5o1WifO4"
+                    title="Tutorial Pembuatan Briket Sekam Padi"
+                    allow="
+                      accelerometer;
+                      autoplay;
+                      clipboard-write;
+                      encrypted-media;
+                      gyroscope;
+                      picture-in-picture;
+                    "
+                    allowfullscreen
+                    loading="lazy"
+                  >
+                  </iframe>
+                </div>
+
+                <a
+                  href="https://youtu.be/iEI5o1WifO4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-red-600 hover:text-red-700 transition-colors"
+                >
+                  <i class="fa-brands fa-youtube"></i> Tonton langsung di
+                  YouTube
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Buku Panduan (Google Drive) -->
+            <div
+              class="bg-white p-8 rounded-3xl border border-gray-100 shadow-lg flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-6">
+                  <h3 class="text-xl font-bold text-brand-textDark">
+                    E-Book Modul Panduan
+                  </h3>
+                  <span
+                    class="text-xs font-semibold bg-green-100 text-brand-green px-3 py-1 rounded-full flex items-center gap-1"
+                  >
+                    <i class="fa-brands fa-google-drive"></i> Google Drive
+                  </span>
+                </div>
+                <p class="text-gray-600 text-sm mb-6">
+                  Baca modul pembelajaran lengkap langsung di halaman ini, atau
+                  buka di tab baru untuk tampilan penuh.
+                </p>
+
+                <!-- Google Drive preview - iframe murni untuk pratinjau, tombol akses ada di luar iframe -->
+                <div class="iframe-wrapper document-ratio shadow-md">
+                  <iframe
+                    src="https://drive.google.com/file/d/1c7TZjGz4ApL6CMLOFKWxZbkoBcp_WlJV/preview"
+                    allow="autoplay"
+                    loading="lazy"
+                  >
+                  </iframe>
+                </div>
+              </div>
+
+              <a
+                href="https://drive.google.com/file/d/1c7TZjGz4ApL6CMLOFKWxZbkoBcp_WlJV/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-gold w-full py-3 px-4 rounded-xl font-bold flex items-center justify-center gap-2 text-sm shadow-md mt-6 gdrive-open-btn"
+              >
+                <i class="fa-solid fa-file-pdf"></i> Buka Modul di Google Drive
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Modal Detail Tutorial ===== -->
+    <div
+      id="step-modal"
+      class="hidden fixed inset-0 z-[100] modal-overlay flex items-center justify-center p-4"
+    >
+      <div
+        class="modal-panel bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-y-auto"
+      >
+        <div
+          class="sticky top-0 bg-brand-green text-white p-6 sm:p-8 flex items-start justify-between rounded-t-3xl"
+        >
+          <div class="flex items-center gap-4">
+            <span
+              id="modal-step-number"
+              class="step-badge w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl text-brand-textDark shadow-md flex-shrink-0"
+              >01</span
+            >
+            <div>
+              <span
+                class="text-[10px] uppercase tracking-wider text-brand-gold font-semibold"
+                >Instruksi Lengkap</span
+              >
+              <h3
+                id="modal-step-title"
+                class="text-xl sm:text-2xl font-extrabold leading-snug"
+              ></h3>
+            </div>
+          </div>
+          <button
+            id="modal-close-btn"
+            class="text-white/80 hover:text-white text-2xl leading-none px-2"
+            aria-label="Tutup"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="p-6 sm:p-8 space-y-6">
+          <div>
+            <h4
+              class="text-sm font-bold text-brand-green uppercase tracking-wider mb-2 flex items-center gap-2"
+            >
+              <i class="fa-solid fa-boxes-stacked"></i> Bahan yang Dibutuhkan
+            </h4>
+            <ul
+              id="modal-materials"
+              class="grid sm:grid-cols-2 gap-2 text-sm text-gray-700"
+            ></ul>
+          </div>
+          <div>
+            <h4
+              class="text-sm font-bold text-brand-green uppercase tracking-wider mb-2 flex items-center gap-2"
+            >
+              <i class="fa-solid fa-toolbox"></i> Alat yang Digunakan
+            </h4>
+            <ul
+              id="modal-tools"
+              class="grid sm:grid-cols-2 gap-2 text-sm text-gray-700"
+            ></ul>
+          </div>
+          <div>
+            <h4
+              class="text-sm font-bold text-brand-green uppercase tracking-wider mb-2 flex items-center gap-2"
+            >
+              <i class="fa-solid fa-list-ol"></i> Langkah Detail
+            </h4>
+            <ol id="modal-steps" class="space-y-3 text-sm text-gray-700"></ol>
+          </div>
+          <div
+            id="modal-tips"
+            class="p-4 rounded-xl bg-amber-50 border border-amber-200 flex items-start gap-3"
+          >
+            <i
+              class="fa-solid fa-triangle-exclamation text-amber-500 mt-0.5"
+            ></i>
+            <p
+              id="modal-tips-text"
+              class="text-xs text-amber-800 leading-relaxed"
+            ></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= 4. FAQ ================= -->
+    <section id="faq" class="py-24 bg-brand-bgCream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-brand-green font-semibold text-sm uppercase tracking-wider bg-green-50 px-3 py-1.5 rounded-full border border-green-200"
+          >
+            Pusat Informasi & FAQ
+          </span>
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold text-brand-textDark mt-3"
+          >
+            Pertanyaan Sering Diajukan
+          </h2>
+          <p class="text-gray-600 mt-4 leading-relaxed">
+            Jawaban atas hal-hal teknis yang sering ditanyakan seputar proses
+            pengarangan, pembuatan adonan perekat, hingga pengeringan briket.
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-4">
+          <div
+            class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm"
+          >
+            <h3
+              class="text-lg font-bold text-brand-textDark flex items-center gap-3"
+            >
+              <i class="fa-solid fa-circle-question text-brand-green"></i>
+              Berapa perbandingan perekat tapioka/molase dengan arang sekam?
+            </h3>
+            <p class="text-gray-600 text-sm mt-3 leading-relaxed pl-8">
+              Rasio ideal adonan perekat adalah 5% hingga 10% dari total berat
+              arang sekam. Larutan tapioka dan molase dimasak terlebih dahulu
+              dengan air hingga menjadi gel kenyal sebelum dicampur rata dengan
+              arang halus.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm"
+          >
+            <h3
+              class="text-lg font-bold text-brand-textDark flex items-center gap-3"
+            >
+              <i class="fa-solid fa-circle-question text-brand-green"></i>
+              Mengapa sekam padi harus dikarbonisasi (diarang) terlebih dahulu?
+            </h3>
+            <p class="text-gray-600 text-sm mt-3 leading-relaxed pl-8">
+              Karbonisasi mengeliminasi senyawa volatil dan kadar air berlebih
+              sehingga saat dibakar, briket menghasilkan panas lebih tinggi,
+              bara api konsisten, serta tidak memicu timbulnya asap hitam tebal.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm"
+          >
+            <h3
+              class="text-lg font-bold text-brand-textDark flex items-center gap-3"
+            >
+              <i class="fa-solid fa-circle-question text-brand-green"></i>
+              Berapa lama waktu pengeringan briket basah?
+            </h3>
+            <p class="text-gray-600 text-sm mt-3 leading-relaxed pl-8">
+              Pengeringan alami menggunakan sinar matahari membutuhkan waktu 2-3
+              hari terik. Jika menggunakan alat oven pengering, waktu
+              pengeringan berkisar antara 6-10 jam pada suhu 60°C hingga kadar
+              air di bawah 8%.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm"
+          >
+            <h3
+              class="text-lg font-bold text-brand-textDark flex items-center gap-3"
+            >
+              <i class="fa-solid fa-circle-question text-brand-green"></i>
+              Apakah alat cetak briket harus menggunakan mesin khusus?
+            </h3>
+            <p class="text-gray-600 text-sm mt-3 leading-relaxed pl-8">
+              Tidak harus. Untuk tingkat pemula atau skala rumah tangga, cetakan
+              sederhana dapat dibuat dari pipa PVC (paralon), cetakan hidrolik
+              manual, atau cetakan briket dongkrak bekas yang terjangkau.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. TENTANG PLATFORM ================= -->
+    <section id="tentang" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="bg-brand-green text-white rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-2xl"
+        >
+          <!-- Background Graphic Decorative -->
+          <div
+            class="absolute -right-20 -bottom-20 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none"
+          ></div>
+          <div
+            class="absolute -left-20 -top-20 w-80 h-80 bg-brand-gold/10 rounded-full blur-2xl pointer-events-none"
+          ></div>
+
+          <div class="grid lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-8 space-y-6">
+              <span
+                class="bg-brand-gold text-brand-textDark text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider"
+              >
+                Tentang Platform Edukasi
+              </span>
+              <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">
+                Mendorong Kemandirian Energi Berbasis Pertanian Lokal
+              </h2>
+              <p class="text-gray-200 leading-relaxed font-light">
+                Program inovasi pembelajaran ini bertujuan untuk mengedukasi
+                masyarakat, pelajar, petani, serta pelaku lingkungan mengenai
+                potensi besar limbah sekam padi yang melimpah di wilayah
+                pertanian.
+              </p>
+              <p class="text-gray-200 leading-relaxed font-light">
+                Dengan mengolahnya menjadi briket bio-energi yang efisien, kita
+                dapat mengurangi ketergantungan pada bahan bakar fosil, menekan
+                emisi karbon, sekaligus mewujudkan wawasan energi hijau yang
+                ramah lingkungan.
+              </p>
+            </div>
+
+            <div
+              class="lg:col-span-4 bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 text-center space-y-4"
+            >
+              <div
+                class="w-16 h-16 rounded-2xl bg-brand-gold text-brand-textDark flex items-center justify-center text-3xl mx-auto"
+              >
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">
+                Mulai Belajar Sekarang
+              </h3>
+              <p class="text-xs text-gray-200 leading-relaxed">
+                Punya pertanyaan atau butuh pendampingan langsung? Konsultasikan
+                kebutuhan belajar Anda dengan tim Echobriq melalui WhatsApp.
+              </p>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-whatsapp w-full py-3 px-4 rounded-xl font-bold flex items-center justify-center gap-2 text-sm shadow-md inline-flex wa-consult-btn"
+              >
+                <i class="fa-brands fa-whatsapp"></i> Konsultasi via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-brand-greenDark text-white pt-16 pb-12 border-t border-white/10"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12"
+        >
+          <!-- Col 1: Brand Info -->
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-lg bg-brand-green flex items-center justify-center text-brand-gold text-xl"
+              >
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <span class="font-extrabold text-xl text-white"
+                >Echobriq<span class="text-brand-gold">.site</span></span
+              >
+            </div>
+            <p class="text-gray-300 text-xs leading-relaxed">
+              Platform edukasi dan portal pembelajaran inovasi pembuatan briket
+              sekam padi ramah lingkungan demi mewujudkan energi bersih dan
+              terjangkau.
+            </p>
+          </div>
+
+          <!-- Col 2: Quick Links -->
+          <div>
+            <h4
+              class="text-brand-gold font-bold text-sm uppercase tracking-wider mb-4"
+            >
+              Tautan Navigasi
+            </h4>
+            <ul class="space-y-2.5 text-xs text-gray-300">
+              <li>
+                <a href="#home" class="hover:text-brand-gold transition-colors"
+                  >Beranda Utama</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#manfaat"
+                  class="hover:text-brand-gold transition-colors"
+                  >Keunggulan Briket</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#tutorial"
+                  class="hover:text-brand-gold transition-colors"
+                  >Langkah Pembuatan</a
+                >
+              </li>
+              <li>
+                <a href="#media" class="hover:text-brand-gold transition-colors"
+                  >Video & Buku Panduan</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Educational Topics -->
+          <div>
+            <h4
+              class="text-brand-gold font-bold text-sm uppercase tracking-wider mb-4"
+            >
+              Topik Pembelajaran
+            </h4>
+            <ul class="space-y-2.5 text-xs text-gray-300">
+              <li>
+                <a
+                  href="#tutorial"
+                  class="hover:text-brand-gold transition-colors"
+                  >Teknik Karbonisasi Sekam</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#tutorial"
+                  class="hover:text-brand-gold transition-colors"
+                  >Formulasi Molase & Kanji</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#tutorial"
+                  class="hover:text-brand-gold transition-colors"
+                  >Teknik Pencetakan & Oven</a
+                >
+              </li>
+              <li>
+                <a href="#faq" class="hover:text-brand-gold transition-colors"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Eco Statement -->
+          <div>
+            <h4
+              class="text-brand-gold font-bold text-sm uppercase tracking-wider mb-4"
+            >
+              Komitmen Hijau
+            </h4>
+            <p class="text-gray-300 text-xs leading-relaxed mb-4">
+              "Mengubah limbah hari ini menjadi energi terbarukan besok. Dukung
+              terus pemanfaatan bio-energi lokal."
+            </p>
+            <div class="flex gap-3 text-brand-gold text-lg">
+              <a
+                href="https://youtu.be/iEI5o1WifO4"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-gold hover:text-brand-greenDark transition-all"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-gold hover:text-brand-greenDark transition-all"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-gold hover:text-brand-greenDark transition-all"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="pt-8 border-t border-white/10 text-center text-xs text-gray-400"
+        >
+          <p>
+            &copy; 2026 Echobriq.site — Inovasi Pembelajaran Pembuatan Briket
+            Sekam Padi. Hak Cipta Dilindungi.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript (dipisah dari HTML) -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
